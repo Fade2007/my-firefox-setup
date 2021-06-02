@@ -199,7 +199,7 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-/* Adds icons to main menu items which were removed in Proton */
+/* Adds icons to main menu items which were removed in Proton, courtesy of u/MrOtherGuy*/
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before,
 #appMenu-protonMainView > .panel-subview-body > toolbarbutton > image{
   fill: currentColor;
