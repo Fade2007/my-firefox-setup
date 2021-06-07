@@ -298,3 +298,8 @@
   border-radius: 4px !important;
 }
 
+/* change tab loading animation color */
+.tab-throbber::before {
+  fill: white !important;
+  opacity: 1 !important;
+}
