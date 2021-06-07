@@ -272,7 +272,7 @@
   margin-top: 1px !important;
 }
 
-/* Shows tab audio icons next to the tab icon, and by default removes the tab secondary line */
+/* Shows tab audio icons next to the tab icon, increase it and by default removes the tab secondary line */
 .tab-icon-stack:is([muted], [soundplaying], [activemedia-blocked]) {
   grid-template-areas: "a s";
 }
@@ -283,11 +283,22 @@
 .tab-icon-image {
   opacity: 1 !important;
 }
+.tab-icon-overlay {
+  transform: scale(1.25, 1.25);
+}
 .tab-secondary-label {
   display: none;
 }
 .tab-secondary-label[pictureinpicture] {
   display: -moz-box;
+}
+
+/* tab close button shows only on hover */
+.tabbrowser-tab .tab-close-button {
+  display: none;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
 }
 
 /* Customize window action buttons ( Close, Min, Max ) */
