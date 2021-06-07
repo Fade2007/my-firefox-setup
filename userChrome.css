@@ -294,6 +294,18 @@ menugroup > menuitem > hbox > image {
   margin-top: 1px !important;
 }
 
+/* Make all tabs small except selected one */
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+  max-width: 115px !important;
+  min-width: 115px !important;
+}
+
+/* Selected tabs width */
+.tabbrowser-tab[selected][fadein]:not([pinned]) {
+  max-width: 205px !important;
+  min-width: 205px !important;
+}
+
 /* Shows tab audio icons next to the tab icon, increase it and by default removes the tab secondary line */
 .tab-icon-stack:is([muted], [soundplaying], [activemedia-blocked]) {
   grid-template-areas: "a s";
