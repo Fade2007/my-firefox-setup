@@ -349,7 +349,14 @@ menugroup > menuitem > hbox > image {
   opacity: 1 !important;
 }
 
-/* rounded corner ctrl-alt panel */
+/* rounded corner ctrl-alt panel + change its color + no favicon and its container in preview */
 #ctrlTab-panel {
   border-radius: 5px !important;
+  background-color: #1c1b22 !important;
+}
+.ctrlTab-favicon-container {
+  display: none !important;
+}
+.ctrlTab-favicon {
+  display: none !important;
 }
