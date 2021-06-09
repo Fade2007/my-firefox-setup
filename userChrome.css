@@ -348,3 +348,8 @@ menugroup > menuitem > hbox > image {
   fill: white !important;
   opacity: 1 !important;
 }
+
+/* rounded corner ctrl-alt panel */
+#ctrlTab-panel {
+  border-radius: 5px !important;
+}
