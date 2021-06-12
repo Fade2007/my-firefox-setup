@@ -365,3 +365,9 @@ menugroup > menuitem > hbox > image {
 .ctrlTab-favicon {
   display: none !important;
 }
+
+/* Show downloaded item clickable area increased fix */
+.downloadButton,
+.downloadIconShow {
+  transform: scale(1.25, 1.25);
+}
