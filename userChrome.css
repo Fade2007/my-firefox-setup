@@ -312,7 +312,6 @@ menugroup > menuitem > hbox > image {
 }
 
 /* Apply dimmed background for inactive tabs */
-
 .tabbrowser-tab:hover
   > .tab-stack
   > .tab-background:not([selected], [multiselected]) {
