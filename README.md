@@ -12,11 +12,13 @@ If you want to suggest me some css things that you think they could improve/fit 
 I'm interested in discovering new things.
 
 **How to use this setup?**
+
 1 - Go to "about:config" and set the pref "toolkit.legacyUserProfileCustomizations.stylesheets2 to true
 2 - Go to "about:support" and find a Profile folder row
 3 - Click "open folder button"
 4 - Create a "chrome" folder in the just opened folder
 5 - Paste the userChrome.css and userContent.css files
 
-**attention please**
+**Attention please**
+
 These are used on W10 20h2, no idea on how they will look in macOS/Linux
