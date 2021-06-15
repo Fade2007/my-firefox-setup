@@ -6,6 +6,7 @@ I don't consider this a "theme" or similiar, I consider this setup an "enchanced
 ##### Can I use this?
 
 Well...
+
 _this repo will be actively updated_, but since this is just my "backup" plan, **I'm not interested** in fixing issues that I don't have. 
 So **no "bug report"**.
 You can do whatever you want with this, however, do it at your own risk.
