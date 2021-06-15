@@ -12,7 +12,7 @@ So **no "bug report"**.
 You can do whatever you want with this, however, do it at your own risk.
 
 ##### "I think this thing could fit/improve your setup and I'd like to let you know, can I pull request/suggest it?"
-If you want to suggest me some css things that you think they could improve/fit with this userChrome/Content, go ahead and open a discussion in "issues". 
+If you want to suggest me some css things that you think they could improve/fit with this userChrome/Content, go ahead and do a pull request or open a thread in "issues" Both are fine. 
 I'm interested in discovering new things.
 
 ##### How to use this setup?
