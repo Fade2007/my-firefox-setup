@@ -28,4 +28,5 @@ I'm interested in discovering new things.
 
 ## Attention please
 
-These are used on W10 20h2, no idea on how they will look in macOS/Linux
+These are used on W10 20h2, no idea on how they will look in macOS/Linux.
+This setup is done for the stable branch of FF.
