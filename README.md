@@ -17,7 +17,7 @@ I'm interested in discovering new things.
 
 ### How to use this setup?
 
-1 - Go to "about:config" and set the pref "toolkit.legacyUserProfileCustomizations.stylesheets2 to true
+1 - Go to "about:config" and set the pref "toolkit.legacyUserProfileCustomizations.stylesheets2" to true
 
 2 - Go to "about:support" and find a Profile folder row
 
