@@ -299,6 +299,11 @@ menugroup > menuitem > hbox > image {
   margin-top: 1px !important;
 }
 
+/* non maximized firefox left tab space fix */
+.titlebar-spacer[type="pre-tabs"] {
+  display: none;
+}
+
 /* Make all tabs small except selected one */
 .tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
   max-width: 145px !important;
