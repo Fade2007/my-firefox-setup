@@ -388,3 +388,64 @@ menugroup > menuitem > hbox > image {
 .downloadIconShow {
   transform: scale(1.25, 1.25);
 }
+
+/* Bookmarks editor dark mode + rounded hover and selected */
+#main-window #editBMPanel_folderTree {
+  min-width: unset !important;
+  max-width: 27em !important;
+}
+#editBookmarkPanel tree {
+  appearance: none !important;
+  background-color: var(--ui-textbox-bgcolor) !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  font-weight: var(--uc-font-weight-thin);
+}
+#editBookmarkPanel richlistbox {
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+#editBookmarkPanel treechildren::-moz-tree-row(hover),
+#editBookmarkPanel treechildren::-moz-tree-cell(hover) {
+  appearance: none !important;
+  background-color: #52525e !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 5px;
+}
+#editBookmarkPanel treechildren::-moz-tree-row(selected),
+#editBookmarkPanel treechildren::-moz-tree-cell(selected) {
+  appearance: none !important;
+  background-color: #2b2a33 !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 5px;
+}
+#editBookmarkPanel treechildren::-moz-tree-row(selected):hover,
+#editBookmarkPanel treechildren::-moz-tree-cell(selected):hover {
+  appearance: none !important;
+  background-color: #2b2a33 !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 5px;
+}
+#editBookmarkPanel treechildren::-moz-tree-cell-text(selected),
+#editBookmarkPanel treechildren::-moz-tree-image(selected),
+#editBookmarkPanel treechildren::-moz-tree-twisty(selected) {
+  appearance: none !important;
+  background-color: #2b2a33 !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 5px;
+}
