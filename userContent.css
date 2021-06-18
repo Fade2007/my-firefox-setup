@@ -1,0 +1,12 @@
+/* Hide personalize button in new tab */
+.personalize-button {
+  display: none !important;
+}
+
+/* remove private browsing annoyances */
+@-moz-document url('about:privatebrowsing') {
+  .info,
+  .promo {
+    visibility: hidden;
+  }
+}

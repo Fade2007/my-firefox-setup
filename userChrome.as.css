@@ -1,0 +1,141 @@
+/* firefox UI scrollbars */
+.hidevscroll-scrollbar {
+    -moz-appearance: none !important;
+    appearance: none !important;
+    margin-left: 4px !important;
+    border: none !important;
+    position: relative !important;
+    background-color: inherit !important;
+    padding: 0px !important;
+    z-index: 20 !important;
+}
+.hidehscroll-scrollbar {
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border: none !important;
+    position: relative !important;
+    background-color: transparent !important;
+    padding: 0px !important;
+    z-index: 20 !important;
+}
+.hidevscroll-scrollbar[orient="vertical"] {
+    min-width: 11px !important;
+    padding-block: 2px !important;
+}
+.hidehscroll-scrollbar[orient="horizontal"] {
+    min-height: 11px !important;
+    padding-inline: 2px !important;
+}
+.hidevscroll-scrollbar[orient="vertical"] thumb {
+    min-height: 20px !important;
+}
+.hidehscroll-scrollbar[orient="horizontal"] thumb {
+    min-width: 20px !important;
+}
+.hidevscroll-scrollbar thumb,
+.hidehscroll-scrollbar thumb {
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-width: 0px !important;
+    border-radius: 5px !important;
+    background-color: transparent !important;
+    opacity: 0.3 !important;
+    transition: opacity 0.4s ease-in-out !important;
+}
+.hidevscroll-scrollbar thumb::before,
+.hidehscroll-scrollbar thumb::before {
+    content: "" !important;
+    display: -moz-box !important;
+    border-radius: 5px !important;
+    background-color: rgba(124, 124, 131, 1) !important;
+    -moz-box-flex: 1 !important;
+}
+.hidevscroll-scrollbar[orient="vertical"] thumb::before {
+    margin-inline-end: 2px !important;
+    min-width: 9px !important;
+}
+.hidehscroll-scrollbar[orient="horizontal"] thumb::before {
+    margin-block-end: 2px !important;
+    min-height: 9px !important;
+}
+.hidevscroll-scrollbar:hover thumb,
+.hidehscroll-scrollbar:hover thumb {
+    background-color: transparent !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.1s ease-in-out !important;
+}
+.hidevscroll-scrollbar thumb:active,
+.hidehscroll-scrollbar thumb:active {
+    background-color: transparent !important;
+    opacity: 0.9 !important;
+    transition: opacity 0.06s ease-in-out !important;
+}
+.hidevscroll-scrollbar scrollbarbutton,
+.hidevscroll-scrollbar gripper,
+.hidehscroll-scrollbar scrollbarbutton,
+.hidehscroll-scrollbar gripper {
+    display: none !important;
+}
+/* browser scrollbars */
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+:not(select):not(hbox) > scrollbar {
+    -moz-appearance: none !important;
+    appearance: none !important;
+    position: relative;
+    background-color: inherit;
+    background-image: none;
+    z-index: 20;
+    padding: 0px;
+}
+:not(select):not(hbox) > scrollbar[orient="vertical"] {
+    min-width: 11px;
+    max-width: 11px;
+    padding-block: 2px !important;
+}
+:not(select):not(hbox) > scrollbar[orient="vertical"] thumb {
+    min-height: 20px;
+}
+:not(select):not(hbox) > scrollbar[orient="horizontal"] {
+    min-height: 11px;
+    max-height: 11px;
+    padding-inline: 2px !important;
+}
+:not(select):not(hbox) > scrollbar[orient="horizontal"] thumb {
+    min-width: 20px;
+}
+:not(select):not(hbox) > scrollbar thumb {
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-width: 0px !important;
+    border-radius: 5px !important;
+    background-color: transparent !important;
+    opacity: 0.3 !important;
+    transition: opacity 0.4s ease-in-out;
+}
+:not(select):not(hbox) > scrollbar thumb::before {
+    content: "" !important;
+    display: -moz-box !important;
+    border-radius: 5px !important;
+    background-color: rgba(124, 124, 131, 1) !important;
+    -moz-box-flex: 1 !important;
+}
+:not(select):not(hbox) > scrollbar[orient="vertical"] thumb::before {
+    margin-inline-end: 2px !important;
+    min-width: 9px !important;
+}
+:not(select):not(hbox) > scrollbar[orient="horizontal"] thumb::before {
+    margin-block-end: 2px !important;
+    min-height: 9px !important;
+}
+:not(select):not(hbox) > scrollbar:hover thumb {
+    opacity: 0.5 !important;
+    transition: opacity 0.1s ease-in-out;
+}
+:not(select):not(hbox) > scrollbar thumb:active {
+    opacity: 0.9 !important;
+    transition: opacity 0.06s ease-in-out;
+}
+:not(select):not(hbox) > scrollbar scrollbarbutton,
+:not(select):not(hbox) > scrollbar gripper {
+    display: none;
+}
