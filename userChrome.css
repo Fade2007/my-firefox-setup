@@ -417,7 +417,7 @@ menugroup > menuitem > hbox > image {
   line-height: normal;
   color: #fff !important;
   border: none !important;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 #editBookmarkPanel treechildren::-moz-tree-row(selected),
 #editBookmarkPanel treechildren::-moz-tree-cell(selected) {
@@ -427,7 +427,7 @@ menugroup > menuitem > hbox > image {
   color: #fff !important;
   border: none !important;
   outline: none !important;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 #editBookmarkPanel treechildren::-moz-tree-row(selected):hover,
 #editBookmarkPanel treechildren::-moz-tree-cell(selected):hover {
@@ -436,7 +436,7 @@ menugroup > menuitem > hbox > image {
   line-height: normal;
   color: #fff !important;
   border: none !important;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 #editBookmarkPanel treechildren::-moz-tree-cell-text(selected),
 #editBookmarkPanel treechildren::-moz-tree-image(selected),
@@ -447,5 +447,5 @@ menugroup > menuitem > hbox > image {
   color: #fff !important;
   border: none !important;
   outline: none !important;
-  border-radius: 5px;
+  border-radius: 4px;
 }
