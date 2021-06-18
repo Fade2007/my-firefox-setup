@@ -277,6 +277,12 @@ menugroup > menuitem > hbox > image {
   display: none !important;
 }
 
+/* remove take a screenshot from context menu and its separator */
+#context-take-screenshot,
+#context-sep-screenshots {
+  display: none !important;
+}
+
 /* remove add to search engines from urlbar context menu */
 .menuitem-iconic.context-menu-add-engine,
 .menuseparator-add-engine {
