@@ -10,3 +10,13 @@
     visibility: hidden;
   }
 }
+
+/* Tab notes background color change */
+@-moz-document url-prefix("moz-extension://5a05da5c-263b-488d-9559-cdc6d61d7654/newtab.html") {
+  #body.dark, #note-content.dark {
+      background-color: #2b2a33 !important;
+  }
+  #list.dark {
+      background-color: #2b2a33 !important;
+}
+}

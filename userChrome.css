@@ -92,6 +92,19 @@
   );
 }
 
+/* change urlbar border highlight to transparent */
+#urlbar-background {
+  border-color: #1c00ff00 !important;
+}
+#urlbar[focused] > #urlbar-background {
+  border-color: #1c00ff00 !important;
+}
+
+/* add-on identity box camouflage */
+#identity-box.extensionPage > .identity-box-button {
+  background-color: transparent !important;
+}
+
 /* Change rainbow line colour to make it look like the rest of the arrow panel menu */
 #appMenu-fxa-separator {
   border-image: unset !important;
