@@ -468,3 +468,8 @@ menugroup > menuitem > hbox > image {
   outline: none !important;
   border-radius: 4px;
 }
+
+/* remove line under nav-toolbar */
+#navigator-toolbox {
+  border-bottom: 0 !important;
+}
