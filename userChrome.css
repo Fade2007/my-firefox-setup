@@ -104,6 +104,9 @@
 #identity-box.extensionPage > .identity-box-button {
   background-color: transparent !important;
 }
+#identity-icon-label {
+  display: none !important;
+}
 
 /* Change rainbow line colour to make it look like the rest of the arrow panel menu */
 #appMenu-fxa-separator {
