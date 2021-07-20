@@ -362,7 +362,7 @@ menugroup > menuitem > hbox > image {
   opacity: 1 !important;
 }
 .tab-icon-overlay {
-  transform: scale(1.25, 1.25);
+  transform: scale(1.3, 1.3);
 }
 .tab-secondary-label {
   display: none;
@@ -408,7 +408,7 @@ menugroup > menuitem > hbox > image {
 /* Show downloaded item clickable area increased fix */
 .downloadButton,
 .downloadIconShow {
-  transform: scale(1.25, 1.25);
+  transform: scale(1.27, 1.27);
 }
 
 /* Bookmarks editor dark mode + rounded hover and selected */
