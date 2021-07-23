@@ -472,32 +472,215 @@ menugroup > menuitem > hbox > image {
   border-radius: 4px;
 }
 
-/* dark mode notifications */
+/* dark mode notifications + rounded notifications */
 @-moz-document url("chrome://global/content/alerts/alert.xhtml")
 {
+  :root {
+    --menu-color: #15141a;
+    --menu-background-color: #f9f9fb;
+    --menu-border-color: #cfcfd8;
+    --menuitem-hover-background-color: #e0e0e6;
+  }
+  @media (-moz-toolbar-prefers-color-scheme: dark) {
+    :root {
+      --menu-border-color: #5b5b66;
+      --menu-color: #fbfbfe;
+      --menu-background-color: #2b2a33;
+      --menuitem-hover-background-color: #52525e;
+    }
+    #alertSourceLabel {
+      color: rgb(5, 209, 241) !important;
+    }
+  }
   #alertBox {
-    border-color: rgba(107, 107, 107, 0.3) !important;
-    background-color: rgb(43, 42, 51) !important;
-    color: rgba(215, 215, 215, 0.9) !important;
+    color: var(--menu-color) !important;
+    background-color: var(--menu-background-color) !important;
+    border-color: var(--menu-border-color) !important;
+    border-radius: 6px !important;
+    -moz-window-shadow: cliprounded !important;
   }
   #alertSettings {
-    -moz-context-properties: fill, fill-opacity !important;
-    padding: 3px !important;
-    margin: 0px 2px -3px 0px !important;
+    fill: currentColor !important;
     color: inherit !important;
-    border-radius: 2px !important;
-    transform: scale(0.91, 0.91) !important;
+    border-radius: 0 !important;
+    margin-inline: 0 !important;
+    margin-bottom: -4px !important;
   }
-  #alertSettings:hover,
-  #alertSettings[open] {
-    background-color: rgba(215, 215, 215, 0.1) !important;
+  .close-icon,
+  #alertSettings {
+    background: transparent !important;
   }
-  #alertSourceLabel {
-    color: rgb(5, 209, 241) !important;
+  .close-icon:hover > .toolbarbutton-icon,
+  #alertSettings:is(:hover, [open]) > .button-box > .box-inherit {
+    background-color: var(--menuitem-hover-background-color);
+  }
+  .close-icon > .toolbarbutton-icon,
+  #alertSettings > .button-box > .box-inherit {
+    border-radius: 4px !important;
+    padding: 2px !important;
+    margin: 2px 2px -2px 0 !important;
+  }
+  #alertSettings > .button-box > .box-inherit {
+    margin: -4px 4px 3px 0 !important;
+  }
+  #alertSettings > .button-box > .box-inherit > .button-icon {
+    padding: 1px;
   }
 }
 
 /* remove line under nav-toolbar */
 #navigator-toolbox {
   border-bottom: 0 !important;
+}
+
+/* Fonts change */
+:root {
+  font-family: SF Pro Display !important;
+}
+checkbox .checkbox-check {
+  background-size: contain;
+}
+#label-box {
+  outline: unset !important;
+}
+:-moz-focusring,
+:focus,
+button::-moz-focus-inner,
+:-moz-focusring *,
+:focus *,
+:-moz-focusring:focus:not(:focus-visible),
+:-moz-focusring:focus:not(:focus-visible) > * {
+  outline: unset !important;
+  outline-offset: unset !important;
+  -moz-outline-radius: unset !important;
+}
+toolbarbutton:focus-visible,
+.keyboard-focused-tab > .tab-stack > .tab-background,
+.tabbrowser-tab:focus:not([aria-activedescendant])
+  > .tab-stack
+  > .tab-background,
+.identity-box-button:not(:active):focus-visible,
+#tracking-protection-icon-container:not(:active):focus-visible,
+#PersonalToolbar .toolbarbutton-1:focus-visible,
+findbar toolbarbutton.tabbable:focus-visible,
+toolbarbutton.bookmark-item:not(.subviewbutton):focus-visible,
+toolbar:not(#PersonalToolbar)
+  .toolbarbutton-1:focus-visible
+  > .toolbarbutton-icon,
+toolbar:not(#PersonalToolbar)
+  .toolbarbutton-1:focus-visible
+  > .toolbarbutton-text,
+toolbar:not(#PersonalToolbar)
+  .toolbarbutton-1:focus-visible
+  > .toolbarbutton-badge-stack {
+  color: inherit;
+  outline: unset !important;
+  -moz-outline-radius: unset !important;
+  outline-offset: unset !important;
+}
+:is(#mainPopupSet, #browser, #navigator-toolbox, .sidebar-panel) ::selection,
+link[href="chrome://global/skin/search-textbox.css"] ~ ::selection
+{
+  background-color: var(--ui-selection-bgcolor) !important;
+  color: var(--ui-selection-color) !important;
+}
+@-moz-document url-prefix("chrome://")
+{
+  ::selection {
+    background-color: var(--url-selection-bgcolor) !important;
+    color: var(--url-selection-color) !important;
+  }
+}
+@-moz-document regexp("^chrome:(?!\/\/(devtools|mozapps|browser\/content\/(places\/places.xhtml|pageinfo\/pageInfo.xhtml)|global\/content\/commonDialog)).*") {
+  /* for most 12px stuff */
+  html:root,
+  window:root,
+  menupopup,
+  panel,
+  popupnotification,
+  tooltip,
+  panelview,
+  #BMB_bookmarksPopup,
+  #main-menubar,
+  .sidebar-search-container {
+    font-family: SF Pro Text, Segoe UI, sans-serif !important;
+    font-kerning: normal !important;
+  }
+  /* for stuff that should be thin */
+  #urlbar,
+  #searchbar,
+  #PopupSearchAutoComplete,
+  treechildren {
+    font-family: SF Pro, Segoe UI, sans-serif !important;
+  }
+  /* for displaying larger font sizes */
+  .panel-header,
+  #sidebar-header,
+  .identity-popup-security-connection,
+  #PanelUI-whatsNew,
+  #protections-popup-message,
+  #protections-popup-no-trackers-found-description {
+    font-family: SF Pro Display, Segoe UI, sans-serif !important;
+    font-kerning: normal !important;
+  }
+  :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
+    .tooltip-label[id]:not(:last-of-type) {
+    padding: 3.5px 6px 18px 6px !important;
+  }
+  :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
+    .tooltip-label:last-of-type:not([id]) {
+    margin-block-start: -17.5px !important;
+  }
+  #fxa-menu-header-description {
+    color: var(--panel-description-color);
+    font-weight: inherit !important;
+  }
+  panel .panel-banner-item {
+    font-weight: var(--uc-font-weight-bold, 500) !important;
+  }
+  tooltip {
+    --uc-tooltip-inner-padding: 3px 6px 4px 6px;
+  }
+  :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label[id] {
+    font-weight: var(--uc-font-weight-semibold, 400) !important;
+  }
+  :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label:not([id]) {
+    font-weight: var(--uc-font-weight-thin, 300) !important;
+  }
+  .places-tooltip-title {
+    font-size: 12px !important;
+    font-weight: var(--uc-font-weight-semibold, 400) !important;
+    line-height: 13.5px !important;
+    max-height: 27px !important;
+  }
+  .places-tooltip-uri {
+    font-weight: var(--uc-font-weight-thin, 300) !important;
+  }
+  .places-tooltip-title[hidden="true"] ~ .places-tooltip-uri {
+    font-weight: inherit !important;
+  }
+  #urlbar-zoom-button .toolbarbutton-text {
+    height: revert !important;
+    font-weight: var(--uc-font-weight-semibold, 400) !important;
+  }
+  toolbar:not(#PersonalToolbar)
+    #zoom-controls
+    > #zoom-reset-button
+    > .toolbarbutton-text {
+    padding-block: 10px !important;
+    font-weight: var(--uc-font-weight-semibold, 400) !important;
+  }
+  #appMenu-zoomReset-button2 .toolbarbutton-text {
+    font-size: 11.5px !important;
+  }
+  .popup-notification-body input[type="password"] {
+    font-family: SF Pro !important;
+  }
+  @-moz-document url-prefix("chrome://browser/content/syncedtabs/sidebar.xhtml")
+  {
+    body {
+      font-family: SF Pro, Segoe UI, sans-serif !important;
+      font-kerning: normal !important;
+    }
+  }
 }
