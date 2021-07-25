@@ -1,3 +1,7 @@
+@import url(icons.css);
+
+
+
 /* Mega urlbar styling */
 :root {
   --mbarstyler-popout-pixels: 1px;
@@ -248,7 +252,7 @@
   }
 }
 
-/* Disable facebook container bar */
+/* Disable container bar */
 .tab-context-line {
   display: none !important;
 }
@@ -296,6 +300,11 @@ menugroup > menuitem > hbox > image {
 /* remove take a screenshot from context menu and its separator */
 #context-take-screenshot,
 #context-sep-screenshots {
+  display: none !important;
+}
+
+/* remove Kee generate password entry in context menu */
+#keefox_chris_tomlinson-menuitem-_generate-password {
   display: none !important;
 }
 
@@ -629,4 +638,29 @@ menugroup > menuitem > hbox > image {
       font-kerning: normal !important;
     }
   }
+}
+
+/* uBlock origin context menu icon change */
+#contentAreaContextMenu
+    :is(.menu-iconic, .menuitem-iconic):is([label="Blocca elemento..."], [label="uBlock Origin"])
+    .menu-iconic-left::before {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    -moz-context-properties: fill, fill-opacity, stroke;
+    content: "";
+    display: -moz-inline-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(hide-password.svg);
+}
+#contentAreaContextMenu
+    :is(.menu-iconic, .menuitem-iconic):is([label="Blocca elemento..."], [label="uBlock Origin"])
+    .menu-iconic-icon {
+    display: none;
+}
+
+/* customize add-ons badge size in slider */
+.toolbarbutton-badge {
+  display: none !important;
 }
