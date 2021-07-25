@@ -1,0 +1,112 @@
+/*** addons icon change ***/
+/* canvasblocker active */
+.webextension-browser-action[data-extensionid="CanvasBlocker@kkapsner.de"]
+  .toolbarbutton-icon {
+  list-style-image: url(fingerprint.svg);
+  transform: scale(1.15, 1.15);
+}
+
+/* canvas blocker not active */
+.webextension-browser-action[data-extensionid="CanvasBlocker@kkapsner.de"][style*="browserAction-notPrinted.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(nofingerprint.svg);
+  transform: scale(1.15, 1.15);
+}
+
+/* privacy oriented origin policy */
+.webextension-browser-action[data-extensionid="poop@cm.org"]
+  .toolbarbutton-icon {
+  list-style-image: url(poop.svg);
+}
+
+/* localCDN active */
+.webextension-browser-action[data-extensionid="{b86e4813-687a-43e6-ab65-0bde4ab75758}"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-good.svg);
+  transform: scale(1.2, 1.2);
+}
+
+/* localCDN not active */
+.webextension-browser-action[data-extensionid="{b86e4813-687a-43e6-ab65-0bde4ab75758}"][style*="icon16-disabled.png"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-bad.svg);
+  transform: scale(1.2, 1.2);
+}
+/* ClearURL active */
+.webextension-browser-action[data-extensionid="{74145f27-f039-47ce-a470-a662b129930a}"]
+  .toolbarbutton-icon {
+  list-style-image: url(trash-on.svg);
+  transform: scale(1.3, 1.3);
+}
+
+/* ClearURL not active */
+.webextension-browser-action[data-extensionid="{74145f27-f039-47ce-a470-a662b129930a}"][style*="clearurls_gray_128x128.png"]
+  .toolbarbutton-icon {
+  list-style-image: url(trash-off.svg);
+  transform: scale(1.3, 1.3);
+}
+
+/* Chameleon active */
+.webextension-browser-action[data-extensionid="{3579f63b-d8ee-424f-bbb6-6d0ce3285e6a}"]
+  .toolbarbutton-icon {
+  list-style-image: url(Chameleon.svg);
+}
+
+/* Chameleon not active */
+.webextension-browser-action[data-extensionid="{3579f63b-d8ee-424f-bbb6-6d0ce3285e6a}"][style*="icon_disabled.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(Chameleon-off.svg);
+}
+
+/* Youtube-audio active */
+.webextension-browser-action[data-extensionid="{580efa7d-66f9-474d-857a-8e2afc6b1181}"]
+  .toolbarbutton-icon {
+  list-style-image: url(music-on.svg);
+  transform: scale(1.25, 1.2);
+}
+
+/* Youtube-audio not active */
+.webextension-browser-action[data-extensionid="{580efa7d-66f9-474d-857a-8e2afc6b1181}"][style*="disabled_icon38.png"]
+  .toolbarbutton-icon {
+  list-style-image: url(music-off.svg);
+  transform: scale(1.2, 1.2);
+}
+
+/* absolute click */
+.webextension-browser-action[data-extensionid="{9350bc42-47fb-4598-ae0f-825e3dd9ceba}"]
+  .toolbarbutton-icon {
+  list-style-image: url(absoluteclick.svg);
+  transform: scale(1.125, 1.125);
+}
+
+/* profile switcher */
+.webextension-browser-action[data-extensionid="profile-switcher-ff@nd.ax"]
+  .toolbarbutton-icon {
+  list-style-image: url(manage-account.svg);
+  transform: scale(1.4, 1.4);
+}
+
+/* Forget me not */
+.webextension-browser-action[data-extensionid="forget-me-not@lusito.info"]
+  .toolbarbutton-icon {
+  list-style-image: url(flower.svg);
+  transform: scale(1.1, 1.1);
+}
+
+/* uBlock origin active */
+.webextension-browser-action[data-extensionid="uBlock0@raymondhill.net"i] .toolbarbutton-icon {
+  list-style-image: url(show-password.svg);
+  transform: scale(1.1, 1.1);
+}
+
+/* uBlock origin not active */
+.webextension-browser-action[data-extensionid="uBlock0@raymondhill.net"i][style*="icon_16-off.png"] .toolbarbutton-icon {
+  list-style-image: url(hide-password.svg);
+  transform: scale(1.1, 1.1);
+}
+
+/* Kee */
+.webextension-browser-action[data-extensionid="keefox@chris.tomlinson"] .toolbarbutton-icon {
+  list-style-image: url(kee.svg);
+  transform: scale(1.4, 1.4);
+}
