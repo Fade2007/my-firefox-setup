@@ -117,7 +117,7 @@
   border-image: unset !important;
 }
 
-/* Adds icons to main menu items which were removed in Proton, courtesy of u/MrOtherGuy */
+/* Adds icons to main menu items which were removed in Proton */
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before,
 #appMenu-protonMainView > .panel-subview-body > toolbarbutton > image {
   fill: currentColor;
