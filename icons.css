@@ -133,11 +133,6 @@
   list-style-image: url(camera.svg);
 }
 
-/* extension options panel */
-#eom-button .toolbarbutton-icon {
-  transform: scale(1.1, 1.1);
-}
-
 /* aToolboxButton */
 #toolbox-button .toolbarbutton-icon {
   transform: scale(1.1, 1.1)
@@ -146,4 +141,9 @@
 /*download icon */
 #downloads-button {
   transform: scale(1.1, 1.1)
+}
+
+/* colourful bookmarker folder */
+.bookmark-item[container] {
+  list-style-image: url(folder.svg) !important;
 }
