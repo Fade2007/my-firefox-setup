@@ -303,10 +303,14 @@ menugroup > menuitem > hbox > image {
   display: none !important;
 }
 
-/* remove Kee generate password entry in context menu */
-#menuitem[label="Kee - Password Manager"] {
-  display: none !important;
-}
+/* remove kee entry context menu */
+#contentAreaContextMenu
+    :is(.menu-iconic, .menuitem-iconic):is([label="Kee - Password Manager"], [label="Kee - Password Manager"]) {
+      display: none !important;
+    }
+    #context-media-eme-separator {
+      display: none !important;
+    }
 
 /* remove add to search engines from urlbar context menu */
 .menuitem-iconic.context-menu-add-engine,
@@ -317,11 +321,6 @@ menugroup > menuitem > hbox > image {
 /* remove inspect accessibility */
 #context-inspect-a11y {
   display: none !important;
-}
-
-/* colourful bookmarker folder */
-.bookmark-item[container] {
-  list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iY29udGV4dC1maWxsIiBmaWxsLW9wYWNpdHk9ImNvbnRleHQtZmlsbC1vcGFjaXR5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8cGF0aCBkPSJNMTQuNSAzSDYuOTE0YS41LjUgMCAwIDEtLjM1NC0uMTQ2TDUuMTQ2IDEuNDM5QTEuNDkxIDEuNDkxIDAgMCAwIDQuMDg2IDFIMS41QTEuNSAxLjUgMCAwIDAgMCAyLjV2MTFBMS41IDEuNSAwIDAgMCAxLjUgMTVoMTNhMS41IDEuNSAwIDAgMCAxLjUtMS41di05QTEuNSAxLjUgMCAwIDAgMTQuNSAzem0uNSAxMC41YS41LjUgMCAwIDEtLjUuNWgtMTNhLjUuNSAwIDAgMS0uNS0uNVY2aDE0ek0xIDVWMi41YS41LjUgMCAwIDEgLjUtLjVoMi41ODZhLjUuNSAwIDAgMSAuMzU0LjE0NmwxLjQxNCAxLjQxNUExLjQ5MSAxLjQ5MSAwIDAgMCA2LjkxNCA0SDE0LjVhLjUuNSAwIDAgMSAuNS41VjV6IiBmaWxsPSIjYjE4NTAyIi8+DQogIDxwYXRoIGQ9Ik0xNSAxMy41YS41LjUgMCAwIDEtLjUuNWgtMTNhLjUuNSAwIDAgMS0uNS0uNVY2aDE0eiIgZmlsbC1vcGFjaXR5PSIuOCIgZmlsbD0iI2ZmZTA4MiIvPg0KICA8cGF0aCBkPSJNMSA1VjIuNWEuNS41IDAgMCAxIC41LS41aDIuNTg2YS41LjUgMCAwIDEgLjM1NC4xNDZsMS40MTQgMS40MTVBMS40OTEgMS40OTEgMCAwIDAgNi45MTQgNEgxNC41YS41LjUgMCAwIDEgLjUuNVY1eiIgZmlsbC1vcGFjaXR5PSIuNiIgZmlsbD0iI2ZmZTA4MiIvPg0KICA8cGF0aCBkPSJNMTUgMTMuNWEuNS41IDAgMCAxLS41LjVoLTEzYS41LjUgMCAwIDEtLjUtLjVWMTNoMTR6IiBmaWxsLW9wYWNpdHk9Ii41IiBmaWxsPSIjZmZlMDgyIi8+DQo8L3N2Zz4=") !important;
 }
 
 /* New tab button alignment fix */
@@ -640,3 +639,11 @@ menugroup > menuitem > hbox > image {
   }
 }
 
+/* remove customize toolbar from overflow menu and its separator */
+#overflowMenu-customize-button {
+  display: none !important;
+}
+#widget-overflow-mainView > toolbarseparator,
+#appMenu-settings-button ~ toolbarseparator {
+  display: none;
+}
