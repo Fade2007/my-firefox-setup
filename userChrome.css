@@ -304,7 +304,7 @@ menugroup > menuitem > hbox > image {
 }
 
 /* remove Kee generate password entry in context menu */
-#keefox_chris_tomlinson-menuitem-_generate-password {
+#menuitem[label="Kee - Password Manager"] {
   display: none !important;
 }
 
@@ -591,39 +591,39 @@ menugroup > menuitem > hbox > image {
     font-weight: inherit !important;
   }
   panel .panel-banner-item {
-    font-weight: var(--uc-font-weight-bold, 500) !important;
+    font-weight: 500 !important;
   }
   tooltip {
     --uc-tooltip-inner-padding: 3px 6px 4px 6px;
   }
   :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label[id] {
-    font-weight: var(--uc-font-weight-semibold, 400) !important;
+    font-weight: 400 !important;
   }
   :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label:not([id]) {
-    font-weight: var(--uc-font-weight-thin, 300) !important;
+    font-weight: 300 !important;
   }
   .places-tooltip-title {
     font-size: 12px !important;
-    font-weight: var(--uc-font-weight-semibold, 400) !important;
+    font-weight: 400 !important;
     line-height: 13.5px !important;
     max-height: 27px !important;
   }
   .places-tooltip-uri {
-    font-weight: var(--uc-font-weight-thin, 300) !important;
+    font-weight: 300 !important;
   }
   .places-tooltip-title[hidden="true"] ~ .places-tooltip-uri {
     font-weight: inherit !important;
   }
   #urlbar-zoom-button .toolbarbutton-text {
     height: revert !important;
-    font-weight: var(--uc-font-weight-semibold, 400) !important;
+    font-weight: 400 !important;
   }
   toolbar:not(#PersonalToolbar)
     #zoom-controls
     > #zoom-reset-button
     > .toolbarbutton-text {
     padding-block: 10px !important;
-    font-weight: var(--uc-font-weight-semibold, 400) !important;
+    font-weight: 400 !important;
   }
   #appMenu-zoomReset-button2 .toolbarbutton-text {
     font-size: 11.5px !important;
@@ -640,27 +640,3 @@ menugroup > menuitem > hbox > image {
   }
 }
 
-/* uBlock origin context menu icon change */
-#contentAreaContextMenu
-    :is(.menu-iconic, .menuitem-iconic):is([label="Blocca elemento..."], [label="uBlock Origin"])
-    .menu-iconic-left::before {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-    -moz-context-properties: fill, fill-opacity, stroke;
-    content: "";
-    display: -moz-inline-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(hide-password.svg);
-}
-#contentAreaContextMenu
-    :is(.menu-iconic, .menuitem-iconic):is([label="Blocca elemento..."], [label="uBlock Origin"])
-    .menu-iconic-icon {
-    display: none;
-}
-
-/* customize add-ons badge size in slider */
-.toolbarbutton-badge {
-  display: none !important;
-}
