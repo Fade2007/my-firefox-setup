@@ -480,6 +480,11 @@ menugroup > menuitem > hbox > image {
   border-radius: 4px;
 }
 
+/* hide favicon of items inside bookmark folders */
+#PersonalToolbar .bookmark-item[container] .menu-iconic-left {
+  display: none !important;
+}
+
 /* dark mode notifications + rounded notifications */
 @-moz-document url("chrome://global/content/alerts/alert.xhtml")
 {
@@ -577,23 +582,12 @@ menugroup > menuitem > hbox > image {
     font-family: SF Pro Display, Segoe UI, sans-serif !important;
     font-kerning: normal !important;
   }
-  :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
-    .tooltip-label[id]:not(:last-of-type) {
-    padding: 3.5px 6px 18px 6px !important;
-  }
-  :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
-    .tooltip-label:last-of-type:not([id]) {
-    margin-block-start: -17.5px !important;
-  }
   #fxa-menu-header-description {
     color: var(--panel-description-color);
     font-weight: inherit !important;
   }
   panel .panel-banner-item {
     font-weight: 500 !important;
-  }
-  tooltip {
-    --uc-tooltip-inner-padding: 3px 6px 4px 6px;
   }
   :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label[id] {
     font-weight: 400 !important;
@@ -621,7 +615,6 @@ menugroup > menuitem > hbox > image {
     #zoom-controls
     > #zoom-reset-button
     > .toolbarbutton-text {
-    padding-block: 10px !important;
     font-weight: 400 !important;
   }
   #appMenu-zoomReset-button2 .toolbarbutton-text {
@@ -647,3 +640,4 @@ menugroup > menuitem > hbox > image {
 #appMenu-settings-button ~ toolbarseparator {
   display: none;
 }
+
