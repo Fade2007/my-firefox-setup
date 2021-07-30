@@ -1,7 +1,5 @@
 @import url(icons.css);
 
-
-
 /* Mega urlbar styling */
 :root {
   --mbarstyler-popout-pixels: 1px;
@@ -115,75 +113,6 @@
 /* Change rainbow line colour to make it look like the rest of the arrow panel menu */
 #appMenu-fxa-separator {
   border-image: unset !important;
-}
-
-/* Adds icons to main menu items which were removed in Proton */
-#appMenu-fxa-status2[fxastatus] > toolbarbutton::before,
-#appMenu-protonMainView > .panel-subview-body > toolbarbutton > image {
-  fill: currentColor;
-  -moz-context-properties: fill;
-  margin-inline: 0 8px !important;
-}
-#appMenu-new-tab-button2 {
-  list-style-image: url("chrome://browser/skin/new-tab.svg");
-}
-#appMenu-new-window-button2 {
-  list-style-image: url("chrome://browser/skin/window.svg");
-}
-#appMenu-new-private-window-button2 {
-  list-style-image: url("chrome://browser/skin/privateBrowsing.svg");
-}
-#appMenu-bookmarks-button {
-  list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
-}
-#appMenu-history-button {
-  list-style-image: url("chrome://browser/skin/history.svg");
-}
-#appMenu-downloads-button {
-  list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
-}
-#appMenu-passwords-button {
-  list-style-image: url("chrome://browser/skin/login.svg");
-}
-#appMenu-extensions-themes-button {
-  list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
-}
-#appMenu-print-button2 {
-  list-style-image: url("chrome://global/skin/icons/print.svg");
-}
-#appMenu-save-file-button2 {
-  list-style-image: url("chrome://browser/skin/save.svg");
-}
-#appMenu-find-button2 {
-  list-style-image: url("chrome://global/skin/icons/search-glass.svg");
-}
-#appMenu-settings-button {
-  list-style-image: url("chrome://global/skin/icons/settings.svg");
-}
-#appMenu-more-button2 {
-  list-style-image: url("chrome://browser/skin/developer.svg");
-}
-#appMenu-help-button2 {
-  list-style-image: url(chrome://global/skin/icons/info.svg);
-}
-#appMenu-quit-button2 {
-  list-style-image: url(chrome://browser/skin/quit.svg);
-}
-#appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
-  display: -moz-box;
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-image: var(--avatar-image-url);
-}
-#appMenu-protonMainView > .panel-subview-body::after {
-  content: "";
-  display: -moz-box;
-  border-bottom: 1px solid var(--panel-separator-color);
-  margin: var(--panel-separator-margin);
-}
-#appMenu-find-button2 ~ * {
-  -moz-box-ordinal-group: 2;
 }
 
 /* Replaces menubar items text ("File Edit etc.") with icons */
@@ -305,12 +234,15 @@ menugroup > menuitem > hbox > image {
 
 /* remove kee entry context menu */
 #contentAreaContextMenu
-    :is(.menu-iconic, .menuitem-iconic):is([label="Kee - Password Manager"], [label="Kee - Password Manager"]) {
-      display: none !important;
-    }
-    #context-media-eme-separator {
-      display: none !important;
-    }
+  :is(.menu-iconic, .menuitem-iconic):is([label="Kee - Password Manager"], [label="Kee - Password Manager"]) {
+  display: none !important;
+}
+#context-media-eme-separator {
+  display: none !important;
+}
+#keefox_chris_tomlinson-menuitem-_generate-password {
+  display: none !important;
+}
 
 /* remove add to search engines from urlbar context menu */
 .menuitem-iconic.context-menu-add-engine,
@@ -332,6 +264,11 @@ menugroup > menuitem > hbox > image {
 /* non maximized firefox left tab space fix */
 .titlebar-spacer[type="pre-tabs"] {
   display: none;
+}
+
+/* make tabs vertically shorter */
+.tabbrowser-tab {
+  min-height: 35px !important;
 }
 
 /* Make all tabs small except selected one */
@@ -640,4 +577,3 @@ menugroup > menuitem > hbox > image {
 #appMenu-settings-button ~ toolbarseparator {
   display: none;
 }
-
