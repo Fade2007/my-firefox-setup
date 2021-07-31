@@ -115,6 +115,75 @@
   border-image: unset !important;
 }
 
+/* Adds icons to main menu items which were removed in Proton */
+#appMenu-fxa-status2[fxastatus] > toolbarbutton::before,
+#appMenu-protonMainView > .panel-subview-body > toolbarbutton > image {
+  fill: currentColor;
+  -moz-context-properties: fill;
+  margin-inline: 0 8px !important;
+}
+#appMenu-new-tab-button2 {
+  list-style-image: url("chrome://browser/skin/new-tab.svg");
+}
+#appMenu-new-window-button2 {
+  list-style-image: url("chrome://browser/skin/window.svg");
+}
+#appMenu-new-private-window-button2 {
+  list-style-image: url("chrome://browser/skin/privateBrowsing.svg");
+}
+#appMenu-bookmarks-button {
+  list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
+}
+#appMenu-history-button {
+  list-style-image: url("chrome://browser/skin/history.svg");
+}
+#appMenu-downloads-button {
+  list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
+}
+#appMenu-passwords-button {
+  list-style-image: url("chrome://browser/skin/login.svg");
+}
+#appMenu-extensions-themes-button {
+  list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
+}
+#appMenu-print-button2 {
+  list-style-image: url("chrome://global/skin/icons/print.svg");
+}
+#appMenu-save-file-button2 {
+  list-style-image: url("chrome://browser/skin/save.svg");
+}
+#appMenu-find-button2 {
+  list-style-image: url("chrome://global/skin/icons/search-glass.svg");
+}
+#appMenu-settings-button {
+  list-style-image: url("chrome://global/skin/icons/settings.svg");
+}
+#appMenu-more-button2 {
+  list-style-image: url("chrome://browser/skin/developer.svg");
+}
+#appMenu-help-button2 {
+  list-style-image: url(chrome://global/skin/icons/info.svg);
+}
+#appMenu-quit-button2 {
+  list-style-image: url(chrome://browser/skin/quit.svg);
+}
+#appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
+  display: -moz-box;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: var(--avatar-image-url);
+}
+#appMenu-protonMainView > .panel-subview-body::after {
+  content: "";
+  display: -moz-box;
+  border-bottom: 1px solid var(--panel-separator-color);
+  margin: var(--panel-separator-margin);
+}
+#appMenu-find-button2 ~ * {
+  -moz-box-ordinal-group: 2;
+}
+
 /* Replaces menubar items text ("File Edit etc.") with icons */
 #main-menubar > menu {
   fill: currentColor;
@@ -258,17 +327,14 @@ menugroup > menuitem > hbox > image {
 /* New tab button alignment fix */
 #tabs-newtab-button,
 #new-tab-button {
-  margin-top: 1px !important;
+  margin-top: 1.10px !important;
+  transform: scale(0.9, 0.9) !important;
+  padding-left: 0px !important;
 }
 
 /* non maximized firefox left tab space fix */
 .titlebar-spacer[type="pre-tabs"] {
   display: none;
-}
-
-/* make tabs vertically shorter */
-.tabbrowser-tab {
-  min-height: 35px !important;
 }
 
 /* Make all tabs small except selected one */
@@ -293,6 +359,11 @@ menugroup > menuitem > hbox > image {
   > .tab-stack
   > .tab-background:not([selected], [multiselected]) {
   background-color: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+/* make tabs vertically shorter */
+.tabbrowser-tab {
+  min-height: 33px !important;
 }
 
 /* Shows tab audio icons next to the tab icon, increase it and by default removes the tab secondary line */
