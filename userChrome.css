@@ -390,9 +390,11 @@ menugroup > menuitem > hbox > image {
 /* tab close button shows only on hover */
 .tabbrowser-tab .tab-close-button {
   display: none;
+  transform: scale(0.8, 0.8);
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   display: -moz-box !important;
+  transform: scale(0.8, 0.8);
 }
 
 /* Customize window action buttons ( Close, Min, Max ) */
