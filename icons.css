@@ -48,9 +48,8 @@
   list-style-image: url(chrome://global/skin/icons/info.svg);
 }
 #appMenu-quit-button2 {
-  list-style-image: url(chrome://browser/skin/quit.svg);
+  list-style-image: url("chrome://devtools/skin/images/search-clear.svg")
 }
-/* Use account-button icon for signed in sync item */
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
   display: -moz-box;
   content: "";
@@ -58,7 +57,6 @@
   height: 16px;
   background-image: var(--avatar-image-url);
 }
-/* Add somewhat hacky separator to zoom controls so it looks consistent */
 #appMenu-protonMainView > .panel-subview-body::after {
   content: "";
   display: -moz-box;
@@ -214,7 +212,7 @@
   transform: scale(1.1, 1.1);
 }
 
-/*download icon */
+/* download icon */
 #downloads-button {
   transform: scale(1.1, 1.1);
 }
@@ -223,7 +221,6 @@
   list-style-image: url(screenshot.svg);
   transform: scale(1.25, 1.25);
 }
-
 /* *** addons icons end *** */
 
 /* colourful bookmarker folder */
