@@ -115,75 +115,6 @@
   border-image: unset !important;
 }
 
-/* Adds icons to main menu items which were removed in Proton */
-#appMenu-fxa-status2[fxastatus] > toolbarbutton::before,
-#appMenu-protonMainView > .panel-subview-body > toolbarbutton > image {
-  fill: currentColor;
-  -moz-context-properties: fill;
-  margin-inline: 0 8px !important;
-}
-#appMenu-new-tab-button2 {
-  list-style-image: url("chrome://browser/skin/new-tab.svg");
-}
-#appMenu-new-window-button2 {
-  list-style-image: url("chrome://browser/skin/window.svg");
-}
-#appMenu-new-private-window-button2 {
-  list-style-image: url("chrome://browser/skin/privateBrowsing.svg");
-}
-#appMenu-bookmarks-button {
-  list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
-}
-#appMenu-history-button {
-  list-style-image: url("chrome://browser/skin/history.svg");
-}
-#appMenu-downloads-button {
-  list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
-}
-#appMenu-passwords-button {
-  list-style-image: url("chrome://browser/skin/login.svg");
-}
-#appMenu-extensions-themes-button {
-  list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
-}
-#appMenu-print-button2 {
-  list-style-image: url("chrome://global/skin/icons/print.svg");
-}
-#appMenu-save-file-button2 {
-  list-style-image: url("chrome://browser/skin/save.svg");
-}
-#appMenu-find-button2 {
-  list-style-image: url("chrome://global/skin/icons/search-glass.svg");
-}
-#appMenu-settings-button {
-  list-style-image: url("chrome://global/skin/icons/settings.svg");
-}
-#appMenu-more-button2 {
-  list-style-image: url("chrome://browser/skin/developer.svg");
-}
-#appMenu-help-button2 {
-  list-style-image: url(chrome://global/skin/icons/info.svg);
-}
-#appMenu-quit-button2 {
-  list-style-image: url(chrome://browser/skin/quit.svg);
-}
-#appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
-  display: -moz-box;
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-image: var(--avatar-image-url);
-}
-#appMenu-protonMainView > .panel-subview-body::after {
-  content: "";
-  display: -moz-box;
-  border-bottom: 1px solid var(--panel-separator-color);
-  margin: var(--panel-separator-margin);
-}
-#appMenu-find-button2 ~ * {
-  -moz-box-ordinal-group: 2;
-}
-
 /* Replaces menubar items text ("File Edit etc.") with icons */
 #main-menubar > menu {
   fill: currentColor;
@@ -420,22 +351,10 @@ menugroup > menuitem > hbox > image {
   opacity: 1 !important;
 }
 
-/* rounded corner ctrl-alt panel + change its color + no favicon and its container in preview */
-#ctrlTab-panel {
-  border-radius: 5px !important;
-  background-color: #1c1b22 !important;
-}
-.ctrlTab-favicon-container {
-  display: none !important;
-}
-.ctrlTab-favicon {
-  display: none !important;
-}
-
 /* Show downloaded item clickable area increased fix */
 .downloadButton,
 .downloadIconShow {
-  transform: scale(1.27, 1.27);
+  transform: scale(1.25, 1.25);
 }
 
 /* Bookmarks editor dark mode + rounded hover and selected */
@@ -650,7 +569,6 @@ menugroup > menuitem > hbox > image {
     }
   }
 }
-
 /* remove customize toolbar from overflow menu and its separator */
 #overflowMenu-customize-button {
   display: none !important;
