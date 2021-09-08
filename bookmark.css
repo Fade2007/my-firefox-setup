@@ -1,65 +1,86 @@
 /* Bookmarks editor dark mode + rounded hover and selected */
 #main-window #editBMPanel_folderTree {
-    min-width: unset !important;
-    max-width: 27em !important;
-  }
-  #editBookmarkPanel tree {
-    appearance: none !important;
-    background-color: var(--ui-textbox-bgcolor) !important;
-    line-height: normal;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 2px !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    font-weight: var(--uc-font-weight-thin);
-  }
-  #editBookmarkPanel richlistbox {
-    border-radius: 2px !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-  }
-  #editBookmarkPanel treechildren::-moz-tree-row(hover),
-  #editBookmarkPanel treechildren::-moz-tree-cell(hover) {
-    appearance: none !important;
-    background-color: #52525e !important;
-    line-height: normal;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 4px;
-  }
-  #editBookmarkPanel treechildren::-moz-tree-row(selected),
-  #editBookmarkPanel treechildren::-moz-tree-cell(selected) {
-    appearance: none !important;
-    background-color: #2b2a33 !important;
-    line-height: normal;
-    color: #fff !important;
-    border: none !important;
-    outline: none !important;
-    border-radius: 4px;
-  }
-  #editBookmarkPanel treechildren::-moz-tree-row(selected):hover,
-  #editBookmarkPanel treechildren::-moz-tree-cell(selected):hover {
-    appearance: none !important;
-    background-color: #2b2a33 !important;
-    line-height: normal;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 4px;
-  }
-  #editBookmarkPanel treechildren::-moz-tree-cell-text(selected),
-  #editBookmarkPanel treechildren::-moz-tree-image(selected),
-  #editBookmarkPanel treechildren::-moz-tree-twisty(selected) {
-    appearance: none !important;
-    background-color: #2b2a33 !important;
-    line-height: normal;
-    color: #fff !important;
-    border: none !important;
-    outline: none !important;
-    border-radius: 4px;
-  }
-  
-  /* hide favicon of items inside bookmark folders */
-  #PersonalToolbar .bookmark-item[container] .menu-iconic-left {
-    display: none !important;
-  }
+  min-width: unset !important;
+  max-width: 27em !important;
+}
+#editBookmarkPanel tree {
+  appearance: none !important;
+  background-color: var(--ui-textbox-bgcolor) !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  font-weight: var(--uc-font-weight-thin);
+}
+#editBookmarkPanel richlistbox {
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+#editBookmarkPanel treechildren::-moz-tree-row(hover),
+#editBookmarkPanel treechildren::-moz-tree-cell(hover) {
+  appearance: none !important;
+  background-color: #52525e !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px;
+}
+#editBookmarkPanel treechildren::-moz-tree-row(selected),
+#editBookmarkPanel treechildren::-moz-tree-cell(selected) {
+  appearance: none !important;
+  background-color: #2b2a33 !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 4px;
+}
+#editBookmarkPanel treechildren::-moz-tree-row(selected):hover,
+#editBookmarkPanel treechildren::-moz-tree-cell(selected):hover {
+  appearance: none !important;
+  background-color: #2b2a33 !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px;
+}
+#editBookmarkPanel treechildren::-moz-tree-cell-text(selected),
+#editBookmarkPanel treechildren::-moz-tree-image(selected),
+#editBookmarkPanel treechildren::-moz-tree-twisty(selected) {
+  appearance: none !important;
+  background-color: #2b2a33 !important;
+  line-height: normal;
+  color: #fff !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 4px;
+}
+
+/* hide favicon of items inside bookmark folders */
+#PersonalToolbar .bookmark-item[container] .menu-iconic-left {
+  display: none !important;
+}
+
+/* makes menus from bookmarks toolbar folders look like context menus do (on Win10) which was the behavior pre-fx92 */
+menupopup[placespopup="true"] {
+  padding: 0 !important;
+  margin: 0 !important;
+  --arrowpanel-background: var(--menu-background-color) !important;
+  border-radius: var(--panel-border-radius) !important;
+}
+.menupopup-arrowscrollbox {
+  margin-top: 1px !important;
+  border: 1px solid var(--panel-border-color) !important;
+  padding: var(--panel-padding) !important;
+  border-radius: var(--panel-border-radius) !important;
+}
+:where(menupopup[placespopup="true"]) menu,
+:where(menupopup[placespopup="true"]) menuitem {
+  margin-inline: 0 !important;
+  padding-inline-start: 1em !important;
+  border-radius: 0 !important;
+  padding-block: 0.5em !important;
+}

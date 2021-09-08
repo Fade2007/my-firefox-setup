@@ -5,9 +5,10 @@
 @import url(contextMenu.css);
 @import url(fonts.css);
 @import url(menuBar.css);
-@import url(notitication.css);
 @import url(overflowMenu.css);
 @import url(tabs.css);
 @import url(toolbar.css);
 @import url(urlBar.css);
 @import url(windowControl.css);
+@import url(findbar.css);
+@import url(notification.css);

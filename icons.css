@@ -48,7 +48,7 @@
   list-style-image: url(chrome://global/skin/icons/info.svg);
 }
 #appMenu-quit-button2 {
-  list-style-image: url("chrome://devtools/skin/images/search-clear.svg")
+  list-style-image: url("chrome://devtools/skin/images/search-clear.svg");
 }
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
   display: -moz-box;
@@ -216,15 +216,25 @@
 #downloads-button {
   transform: scale(1.1, 1.1);
 }
+
 /* screenshot tool */
 #screenshot-button .toolbarbutton-icon {
   list-style-image: url(screenshot.svg);
   transform: scale(1.25, 1.25);
 }
 
+/* extension options panel */
 #eom-button .toolbarbutton-icon {
   list-style-image: url(extension.svg);
 }
+
+/* xBrowserSync */
+.webextension-browser-action[data-extensionid="{019b606a-6f61-4d01-af2a-cea528f606da}"]
+  .toolbarbutton-icon {
+  list-style-image: url(xbrowsersync.svg);
+  transform: scale(1.05, 1.05);
+}
+
 /* *** addons icons end *** */
 
 /* colourful bookmarker folder */
