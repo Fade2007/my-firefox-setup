@@ -1,0 +1,82 @@
+/* Disable container bar */
+.tab-context-line {
+    display: none !important;
+  }
+
+  /* New tab button alignment fix */
+#tabs-newtab-button,
+#new-tab-button {
+  margin-top: 1.1px !important;
+  transform: scale(0.9, 0.9) !important;
+  padding-left: 0px !important;
+}
+#tabs-newtab-button > .toolbarbutton-icon {
+  border-radius: 5px !important;
+}
+
+/* Make all tabs small except selected one */
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+  max-width: 145px !important;
+  min-width: 145px !important;
+}
+
+/* Selected tabs width */
+.tabbrowser-tab[selected][fadein]:not([pinned]) {
+  max-width: 225px !important;
+  min-width: 225px !important;
+}
+
+/* Apply dimmed background for inactive tabs */
+.tabbrowser-tab:hover
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+.tabbrowser-tab
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+/* make tabs vertically shorter */
+.tabbrowser-tab {
+  min-height: 33px !important;
+}
+
+/* Shows tab audio icons next to the tab icon, increase it and by default removes the tab secondary line */
+.tab-icon-stack:is([muted], [soundplaying], [activemedia-blocked]) {
+  grid-template-areas: "a s";
+}
+.tab-icon-overlay:is([muted], [soundplaying], [activemedia-blocked]) {
+  grid-area: s;
+}
+.tab-icon-overlay,
+.tab-icon-image {
+  opacity: 1 !important;
+}
+.tab-icon-overlay {
+  transform: scale(1.2, 1.2);
+}
+.tab-secondary-label {
+  display: none;
+}
+.tab-secondary-label[pictureinpicture] {
+  display: -moz-box;
+}
+
+/* tab close button shows only on hover */
+.tabbrowser-tab .tab-close-button {
+  display: none;
+  transform: scale(0.8, 0.8);
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
+  transform: scale(0.8, 0.8);
+}
+
+/* change tab loading animation color */
+.tab-throbber::before {
+  fill: white !important;
+  opacity: 1 !important;
+}
+

@@ -1,0 +1,6 @@
+/* Change rainbow line colour to make it look like the rest of the arrow panel menu */
+#appMenu-fxa-separator {
+    border-image: unset !important;
+  }
+
+  

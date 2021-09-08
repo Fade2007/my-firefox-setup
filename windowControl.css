@@ -1,0 +1,13 @@
+/* non maximized firefox left tab space fix */
+.titlebar-spacer[type="pre-tabs"] {
+    display: none;
+  }
+
+  /* Customize window action buttons ( Close, Min, Max ) */
+.titlebar-button {
+    margin: 4px !important;
+    margin-left: 0 !important;
+    margin-right: 5px !important;
+    border-radius: 4px !important;
+  }
+  

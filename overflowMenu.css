@@ -1,0 +1,9 @@
+/* remove customize toolbar from overflow (extra-menu) menu and its separator */
+#overflowMenu-customize-button {
+    display: none !important;
+  }
+  #widget-overflow-mainView > toolbarseparator,
+  #appMenu-settings-button ~ toolbarseparator {
+    display: none;
+  }
+  

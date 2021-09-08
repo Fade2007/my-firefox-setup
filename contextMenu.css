@@ -1,0 +1,77 @@
+/* Tighten up drop-down/context/popup menu spacing */
+menupopup > menuitem,
+menupopup > menu {
+  padding-block: 4px !important;
+}
+:root {
+  --arrowpanel-menuitem-padding: 6px !important;
+}
+
+/* change context menu hover style */
+menupopup > menuitem,
+menupopup > menu {
+  border-radius: 4px !important;
+
+  margin-left: 5px !important;
+
+  margin-right: 5px !important;
+}
+menugroup > menuitem:first-child {
+  padding-left: 5px !important;
+}
+menugroup > menuitem:last-child {
+  padding-right: 5px !important;
+}
+menugroup > menuitem {
+  border-radius: 5px !important;
+}
+menugroup > menuitem > hbox > image {
+  border-radius: 5px !important;
+}
+
+/* Disable open link in new container from context menu */
+#context-openlinkinusercontext-menu {
+  display: none !important;
+}
+
+/* Remove context navigation and context line separator from context menu */
+#context-navigation,
+#context-sep-navigation {
+  display: none !important;
+}
+
+/* remove search with from context menu and its line separator */
+#context-searchselect,
+#frame-sep,
+#context-sep-sendlinktodevice {
+  display: none !important;
+}
+
+/* remove take a screenshot from context menu and its separator */
+#context-take-screenshot,
+#context-sep-screenshots {
+  display: none !important;
+}
+
+/* remove kee entry context menu */
+#contentAreaContextMenu
+  :is(.menu-iconic, .menuitem-iconic):is([label="Kee - Password Manager"], [label="Kee - Password Manager"]) {
+  display: none !important;
+}
+#context-media-eme-separator {
+  display: none !important;
+}
+#keefox_chris_tomlinson-menuitem-_generate-password {
+  display: none !important;
+}
+
+/* remove add to search engines from urlbar context menu */
+.menuitem-iconic.context-menu-add-engine,
+.menuseparator-add-engine {
+  display: none !important;
+}
+
+/* remove inspect accessibility */
+#context-inspect-a11y {
+  display: none !important;
+}

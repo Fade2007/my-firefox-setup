@@ -1,0 +1,85 @@
+/* Fonts change */
+:root {
+    font-family: SF Pro Display !important;
+  }
+  @-moz-document regexp("^chrome:(?!\/\/(devtools|mozapps|browser\/content\/(places\/places.xhtml|pageinfo\/pageInfo.xhtml)|global\/content\/commonDialog)).*") {
+    /* for most 12px stuff */
+    html:root,
+    window:root,
+    menupopup,
+    panel,
+    popupnotification,
+    tooltip,
+    panelview,
+    #BMB_bookmarksPopup,
+    #main-menubar,
+    .sidebar-search-container {
+      font-family: SF Pro Text, Segoe UI, sans-serif !important;
+      font-kerning: normal !important;
+    }
+    /* for stuff that should be thin */
+    #urlbar,
+    #searchbar,
+    #PopupSearchAutoComplete,
+    treechildren {
+      font-family: SF Pro, Segoe UI, sans-serif !important;
+    }
+    /* for displaying larger font sizes */
+    .panel-header,
+    #sidebar-header,
+    .identity-popup-security-connection,
+    #PanelUI-whatsNew,
+    #protections-popup-message,
+    #protections-popup-no-trackers-found-description {
+      font-family: SF Pro Display, Segoe UI, sans-serif !important;
+      font-kerning: normal !important;
+    }
+    #fxa-menu-header-description {
+      color: var(--panel-description-color);
+      font-weight: inherit !important;
+    }
+    panel .panel-banner-item {
+      font-weight: 500 !important;
+    }
+    :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label[id] {
+      font-weight: 400 !important;
+    }
+    :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label:not([id]) {
+      font-weight: 300 !important;
+    }
+    .places-tooltip-title {
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      line-height: 13.5px !important;
+      max-height: 27px !important;
+    }
+    .places-tooltip-uri {
+      font-weight: 300 !important;
+    }
+    .places-tooltip-title[hidden="true"] ~ .places-tooltip-uri {
+      font-weight: inherit !important;
+    }
+    #urlbar-zoom-button .toolbarbutton-text {
+      height: revert !important;
+      font-weight: 400 !important;
+    }
+    toolbar:not(#PersonalToolbar)
+      #zoom-controls
+      > #zoom-reset-button
+      > .toolbarbutton-text {
+      font-weight: 400 !important;
+    }
+    #appMenu-zoomReset-button2 .toolbarbutton-text {
+      font-size: 11.5px !important;
+    }
+    .popup-notification-body input[type="password"] {
+      font-family: SF Pro !important;
+    }
+    @-moz-document url-prefix("chrome://browser/content/syncedtabs/sidebar.xhtml")
+    {
+      body {
+        font-family: SF Pro, Segoe UI, sans-serif !important;
+        font-kerning: normal !important;
+      }
+    }
+  }

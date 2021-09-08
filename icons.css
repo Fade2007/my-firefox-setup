@@ -221,9 +221,19 @@
   list-style-image: url(screenshot.svg);
   transform: scale(1.25, 1.25);
 }
+
+#eom-button .toolbarbutton-icon {
+  list-style-image: url(extension.svg);
+}
 /* *** addons icons end *** */
 
 /* colourful bookmarker folder */
 .bookmark-item[container] {
   list-style-image: url(folder.svg) !important;
+}
+
+/* Show downloaded item clickable area increased fix */
+.downloadButton,
+.downloadIconShow {
+  transform: scale(1.25, 1.25);
 }

@@ -1,0 +1,4 @@
+/* remove line under nav-toolbar */
+#navigator-toolbox {
+    border-bottom: 0 !important;
+  }
