@@ -1,12 +1,3 @@
-/* Tighten up drop-down/context/popup menu spacing */
-menupopup > menuitem,
-menupopup > menu {
-  padding-block: 4px !important;
-}
-:root {
-  --arrowpanel-menuitem-padding: 6px !important;
-}
-
 /* change context menu hover style */
 menupopup > menuitem,
 menupopup > menu {
