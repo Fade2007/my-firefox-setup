@@ -75,3 +75,13 @@ menugroup > menuitem > hbox > image {
 #context-inspect-a11y {
   display: none !important;
 }
+
+/* remove aliexpress tracker from context menu */
+#jid1-koqzhmowlztafg_jetpack-menuitem-_context_menus_aliprice_search_by_image {
+  display: none !important;
+}
+
+/* remove keepa entry from context menu */
+#amptra_keepa_com-menuitem-1 {
+  display: none !important;
+}
