@@ -235,6 +235,12 @@
   transform: scale(1.05, 1.05);
 }
 
+/* Stylus */
+.webextension-browser-action[data-extensionid="{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}"]
+  .toolbarbutton-icon {
+  list-style-image: url(stylus.svg)
+  }
+
 /* *** addons icons end *** */
 
 /* colourful bookmarker folder */
@@ -247,3 +253,5 @@
 .downloadIconShow {
   transform: scale(1.25, 1.25);
 }
+
+
