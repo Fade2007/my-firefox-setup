@@ -261,3 +261,16 @@
   > #tracking-protection-icon {
   list-style-image: url(tracking-protection.svg) !important;
 }
+
+/* bookmarks star */
+#star-button {
+  --toolbarbutton-icon-fill-attention: white !important;
+}
+
+.urlbarView-row[type="bookmark"]
+    > .urlbarView-row-inner
+    > .urlbarView-no-wrap
+    > .urlbarView-type-icon {
+    background-image: url(chrome://browser/skin/bookmark-12.svg);
+    fill: white !important;
+  }
