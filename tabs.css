@@ -76,3 +76,5 @@ fill: white !important;
 opacity: 1 !important;
 }
 
+/* disable preview of a tab name as you hover over it */
+#tabbrowser-tab-tooltip{ display: none !important; }
