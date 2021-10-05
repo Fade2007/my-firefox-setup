@@ -93,12 +93,7 @@
 }
 
 /* change urlbar border highlight to transparent */
-#urlbar-background {
-  border-color: #1c00ff00 !important;
-}
-#urlbar[focused] > #urlbar-background {
-  border-color: #1c00ff00 !important;
-}
+:root{ --toolbar-field-focus-border-color: transparent !important; }
 
 /* add-on identity box camouflage */
 #identity-box.extensionPage > .identity-box-button {
