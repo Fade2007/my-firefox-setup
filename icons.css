@@ -227,6 +227,11 @@
   list-style-image: url(stylus.svg);
 }
 
+/* youtube enchancer */
+#pageAction-urlbar-_21f1ba12-47e1-4a9b-ad4e-3a0260bbeb26_ {
+  list-style-image: url(music-on.svg) !important;
+}
+
 /* *** addons icons end *** */
 
 /* colourful bookmarker folder */
