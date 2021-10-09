@@ -1,0 +1,30 @@
+/* change colors of download pie */
+#downloads-button[progress] {
+    --downloads-progress-border-color: white !important;
+    --downloads-progress-fill: white !important;
+}
+#downloads-button[attention="success"] {
+    --downloads-progress-border-color: white !important;
+    --downloads-progress-fill: white !important;
+}
+#downloads-button[attention="warning"] {
+    --downloads-progress-border-color: white !important;
+    --downloads-progress-fill: yellow !important;
+}
+#downloads-button[attention="severe"] {
+    --downloads-progress-border-color: white !important;
+    --downloads-progress-fill: red !important;
+}
+#downloads-button {
+    --toolbarbutton-icon-fill-attention: var(--downloads-progress-fill) !important;
+}
+#downloads-button > .toolbarbutton-badge-stack > #downloads-indicator-progress-outer {
+    border-color: var(--downloads-progress-border-color) !important;
+}
+
+/* change color of progress bar */
+.downloadProgress::-moz-progress-bar {
+	appearance: none;
+	background-color: white !important;
+	border-radius: 2px;
+}
