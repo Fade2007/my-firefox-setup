@@ -1,4 +1,4 @@
-/* Disable container bar */
+/* Disable default container bar */
 .tab-context-line {
   display: none !important;
 }
@@ -6,75 +6,176 @@
 /* New tab button alignment fix */
 #tabs-newtab-button,
 #new-tab-button {
-margin-top: 1.1px !important;
-padding-left: 0px !important;
+  margin-top: 1.1px !important;
+  padding-left: 0px !important;
 }
 #tabs-newtab-button > .toolbarbutton-icon {
-border-radius: 5px !important;
+  border-radius: 5px !important;
 }
 
 /* Make all tabs small except selected one */
 .tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
-max-width: 145px !important;
-min-width: 145px !important;
+  max-width: 145px !important;
+  min-width: 145px !important;
 }
 
 /* Selected tabs width */
 .tabbrowser-tab[selected][fadein]:not([pinned]) {
-max-width: 225px !important;
-min-width: 225px !important;
+  max-width: 225px !important;
+  min-width: 225px !important;
 }
 
 /* Apply dimmed background for inactive tabs */
 .tabbrowser-tab:hover
-> .tab-stack
-> .tab-background:not([selected], [multiselected]) {
-background-color: color-mix(in srgb, currentColor 12%, transparent);
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
 }
 .tabbrowser-tab
-> .tab-stack
-> .tab-background:not([selected], [multiselected]) {
-background-color: color-mix(in srgb, currentColor 6%, transparent);
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 6%, transparent);
 }
-
-
 
 /* Shows tab audio icons next to the tab icon, increase it and by default removes the tab secondary line */
 .tab-icon-stack:is([muted], [soundplaying], [activemedia-blocked]) {
-grid-template-areas: "a s";
+  grid-template-areas: "a s";
 }
 .tab-icon-overlay:is([muted], [soundplaying], [activemedia-blocked]) {
-grid-area: s;
+  grid-area: s;
 }
 .tab-icon-overlay,
 .tab-icon-image {
-opacity: 1 !important;
+  opacity: 1 !important;
 }
 .tab-icon-overlay {
-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
 .tab-secondary-label {
-display: none;
+  display: none;
 }
 .tab-secondary-label[pictureinpicture] {
-display: -moz-box;
+  display: -moz-box;
 }
 
 /* tab close button shows only on hover */
 .tabbrowser-tab .tab-close-button {
-display: none;
-transform: scale(0.8, 0.8);
+  display: none;
+  transform: scale(0.8, 0.8);
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
-display: -moz-box !important;
-transform: scale(0.8, 0.8);
+  display: -moz-box !important;
+  transform: scale(0.8, 0.8);
 }
 
 /* change tab loading animation color */
 .tab-throbber::before {
-fill: white !important;
-opacity: 1 !important;
+  fill: white !important;
+  opacity: 1 !important;
 }
 
 /* disable preview of a tab name as you hover over it */
-#tabbrowser-tab-tooltip{ display: none !important; }
+#tabbrowser-tab-tooltip {
+  display: none !important;
+}
+
+/* container line under tab favicon */
+.tab-icon-image,
+.tab-sharing-icon-overlay {
+  box-sizing: content-box;
+  padding: 3px 0;
+  border-bottom: 2px solid var(--identity-icon-color);
+}
+/* Busy, None exist favicon */
+.tabbrowser-tab[busy] .tab-content::before,
+.tabbrowser-tab:not([image]):not([pinned], [sharing], [crashed]):not([soundplaying], [muted], [activemedia-blocked])
+  .tab-content::before,
+.tabbrowser-tab[pinned][visuallyselected]:not([busy]):not(:hover)
+  .tab-content::before {
+  /* Box Model */
+  content: "";
+  display: block;
+  position: absolute !important;
+  transition: 0.2s !important;
+  transform: translateY(10px) !important;
+/* Shape */
+  border-bottom: 2px solid var(--identity-icon-color);
+  width: 16px;
+}
+.tabbrowser-tab[busy] .tab-content::before,
+.tabbrowser-tab:not([image]):not([pinned], [sharing], [crashed]):not([soundplaying], [muted], [activemedia-blocked])
+  .tab-content::before {
+  transform: translateY(10px) !important; /* None exist favicon */
+}
+/* None exist favicon - With Sound */
+.tabbrowser-tab:not([image])
+  .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+  box-sizing: content-box;
+  padding: 3px 0;
+  border-radius: 0 !important;
+  border-bottom: 2px solid var(--identity-icon-color);
+}
+.tabbrowser-tab:not([image])
+  .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]):hover {
+  padding: 0;
+  border-radius: 10px !important;
+  border-bottom: none;
+}
+/* Pinned Tab - Titlechanged Indicator override */
+.tabbrowser-tab:is([image], [pinned])
+  > .tab-stack
+  > .tab-content[attention]:not([selected="true"])
+  .tab-icon-image,
+.tabbrowser-tab
+  > .tab-stack
+  > .tab-content[pinned][titlechanged]:not([selected="true"])
+  .tab-icon-image {
+  border-bottom: 2px solid transparent !important;
+}
+.tabbrowser-tab:is([image], [pinned])[usercontextid]
+  > .tab-stack
+  > .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab[usercontextid]
+  > .tab-stack
+  > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+  /* Original: radial-gradient(circle, var(--attention-icon-color), var(--attention-icon-color) 2px, transparent 2px); */
+  --dotted-identity-image: radial-gradient(
+    circle,
+    var(--identity-icon-color),
+    var(--identity-icon-color) 2px,
+    transparent 2px
+  );
+  background-image: var(--dotted-identity-image), var(--dotted-identity-image),
+    var(--dotted-identity-image) !important;
+  background-position-x: 32%, 50%, 70% !important;
+}
+:root[uidensity="compact"]
+  .tabbrowser-tab:is([image], [pinned])[usercontextid]
+  > .tab-stack
+  > .tab-content[attention]:not([selected="true"]),
+:root[uidensity="compact"]
+  .tabbrowser-tab[usercontextid]
+  > .tab-stack
+  > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+  /* Original: radial-gradient(circle, var(--attention-icon-color), var(--attention-icon-color) 2px, transparent 2px); */
+  background-position-x: 30%, 50%, 70% !important;
+}
+/* Pinned Tab - Titlechanged & soundplaying */
+.tabbrowser-tab:is([image], [pinned])[usercontextid]:is([soundplaying], [muted], [activemedia-blocked])
+  > .tab-stack
+  > .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab[usercontextid]:is([soundplaying], [muted], [activemedia-blocked])
+  > .tab-stack
+  > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+  background-position-x: calc(32% - 1px), calc(50% - 1px), calc(70% - 1px) !important;
+}
+:root[uidensity="compact"]
+  .tabbrowser-tab:is([image], [pinned])[usercontextid]:is([soundplaying], [muted], [activemedia-blocked])
+  > .tab-stack
+  > .tab-content[attention]:not([selected="true"]),
+:root[uidensity="compact"]
+  .tabbrowser-tab[usercontextid]:is([soundplaying], [muted], [activemedia-blocked])
+  > .tab-stack
+  > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+  background-position-x: calc(30% - 1px), calc(50% - 1px), calc(70% - 1px) !important;
+}
