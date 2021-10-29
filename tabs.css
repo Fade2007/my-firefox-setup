@@ -37,26 +37,16 @@
   background-color: color-mix(in srgb, currentColor 6%, transparent);
 }
 
-/* Shows tab audio icons next to the tab icon, increase it and by default removes the tab secondary line */
-.tab-icon-stack:is([muted], [soundplaying], [activemedia-blocked]) {
-  grid-template-areas: "a s";
+/* Shows tab audio icons at top right corner of the tab icon */
+  .tab-icon-overlay {
+    opacity: 1 !important;
+    left: 4px !important;
+    bottom: 4px !important;
+    fill-opacity: 1 !important;
 }
-.tab-icon-overlay:is([muted], [soundplaying], [activemedia-blocked]) {
-  grid-area: s;
-}
-.tab-icon-overlay,
-.tab-icon-image {
-  opacity: 1 !important;
-}
-.tab-icon-overlay {
-  transform: scale(1.2, 1.2);
-}
-.tab-secondary-label {
-  display: none;
-}
-.tab-secondary-label[pictureinpicture] {
-  display: -moz-box;
-}
+.tab-icon-stack .tab-icon-image {
+    opacity: 1 !important;
+} 
 
 /* tab close button shows only on hover */
 .tabbrowser-tab .tab-close-button {
