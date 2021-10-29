@@ -7,7 +7,7 @@
   --mbarstyler-max-rows-without-scrolling: 10;
   --mbarstyler-bottom-border-width: 0px;
   --mbarstyler-label-height-adjustment: 0px;
-  --mbarstyler-match-weight: 700;
+  --mbarstyler-match-weight: 600;
   --mbarstyler-match-background-opacity: 0;
 }
 #urlbar[breakout][breakout-extend] {
