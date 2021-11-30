@@ -118,6 +118,11 @@
     fill: white !important;
   }
 
+/* tab close button icon change */
+.tab-close-button{
+  list-style-image: url(tabclose.svg) !important;
+}
+
 /* *** addons icons start *** */
 /* canvasblocker active */
 .webextension-browser-action[data-extensionid="CanvasBlocker@kkapsner.de"]

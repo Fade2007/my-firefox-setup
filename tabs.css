@@ -37,16 +37,22 @@
   background-color: color-mix(in srgb, currentColor 6%, transparent);
 }
 
-/* Shows tab audio icons at top right corner of the tab icon */
-  .tab-icon-overlay {
+/* Makes the tab audio indicator show as overlay in all tabs, not just pinned ones */
+.tab-icon-image,
+.tab-throbber{ opacity: 1 !important; }
+
+.tab-icon-overlay:not([crashed]){
+    top: -5.5px;
+    inset-inline-end: -6px;
+    z-index: 1;
+    padding: 2px;
     opacity: 1 !important;
-    left: 4px !important;
-    bottom: 4px !important;
-    fill-opacity: 1 !important;
+    stroke: var(--tab-icon-overlay-stroke, black) !important;
 }
-.tab-icon-stack .tab-icon-image {
-    opacity: 1 !important;
-} 
+.tab-icon-overlay:not([crashed]):hover{
+  background-color: var(--tab-icon-overlay-stroke, black) !important;
+  border-radius: 10px !important;
+}
 
 /* tab close button shows only on hover */
 .tabbrowser-tab .tab-close-button {

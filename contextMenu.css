@@ -76,3 +76,8 @@ menugroup > menuitem > hbox > image {
 #amptra_keepa_com-menuitem-1 {
   display: none !important;
 }
+
+/* remove XDM from context menu */
+#browser-mon_xdman_sourceforge_net-menuitem-3 {
+  display: none !important;
+}
