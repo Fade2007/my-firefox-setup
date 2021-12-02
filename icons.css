@@ -270,5 +270,42 @@
   list-style-image: url(music-on.svg) !important;
 }
 
+/* skip redirect not active */
+.webextension-browser-action[data-extensionid="skipredirect@sblask"][style*="icon-off.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(skipRedirectOff.svg);
+}
+
+/* skip redirect active for all except same domain */
+.webextension-browser-action[data-extensionid="skipredirect@sblask"][style*="icon-no-skip-urls-list.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(skipRedirectOn.svg) !important;
+}
+
+/* skip redirect active for list only */
+.webextension-browser-action[data-extensionid="skipredirect@sblask"][style*="icon-skip-urls-list.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(skipRedirectOn.svg) !important;
+}
+
+/* skip redirect badge off */
+#skipredirect_sblask-browser-action .toolbarbutton-badge {
+  display: none !important;
+}
+
+/* smart referer on */
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUUlEQVQ4jZXSv0vVURzG8ZekXsEgh6D94paoLcHtLxBbbEvs/ge6uImzIGI4aEhDDvoPBNZ+oamco0m4hNXFn1soiNfBRzmD3nL48D3f57yfh/M5nwOPMYYtNNH+RzXDjsVrArs4RAvnHcznYQ7jmYBtHGEdr1HFgzuqGmY9nm04SOokFrGHfWwWxs1oe2Em4zlQHK0aYBrPUCsCatGmw1SLVrVxEbBdfG+rkrm4DjjLUZ7fI2AknjP4mp9Z/MZMhxZm8AtTucRvMJ++PmDlPy5xGe8zygV4hZ/4nuT+DmPsxxv8KCbnKT7iOHMdRA+6C2N3tMEw1+wQ9GXRyMZSQiuFsRJtKUwjnj7ZfIi6q3fewucAj/AEo9FaYerxVKA3NeDqme7gBJ8wh7f4Em0nzEDhu1n0JnUcq/iDvzjNBDbwMkzpufW2uzCMNbzDi7smcwnmOn9R1XjBYwAAAABJRU5ErkJggg=="]
+  .toolbarbutton-icon {
+  list-style-image: url(refererOn.svg) !important;
+  transform: scale(1.1, 1.1);
+} 
+
+/* smart referer off */
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="icon-disabled.16x16.png"]
+  .toolbarbutton-icon {
+  list-style-image: url(refererOff.svg) !important;
+  transform: scale(1.1, 1.1);
+}
+
 /* *** addons icons end *** */
 
