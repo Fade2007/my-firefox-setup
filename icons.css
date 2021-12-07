@@ -106,7 +106,7 @@
 
 /* bookmarks star */
 #star-button {
-  --toolbarbutton-icon-fill-attention: white !important;
+  fill: white !important;
 }
 
 /* bookmark star in urlbar results */
