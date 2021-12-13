@@ -198,12 +198,12 @@
   transform: scale(1.4, 1.4);
 }
 
-/* Forget me not */
+/* Forget me not 
 .webextension-browser-action[data-extensionid="forget-me-not@lusito.info"]
   .toolbarbutton-icon {
   list-style-image: url(flower.svg);
   transform: scale(1.1, 1.1);
-}
+} /*
 
 /* uBlock origin active */
 .webextension-browser-action[data-extensionid="uBlock0@raymondhill.net"i]
@@ -321,6 +321,13 @@
 .webextension-browser-action[data-extensionid="{aecec67f-0d10-4fa7-b7c7-609a2db280cf}"]
   .toolbarbutton-icon {
   list-style-image: url(violentMonkey.svg) !important;
+  transform: scale(1.1, 1.1);
+}
+
+/* Cookie editor */
+.webextension-browser-action[data-extensionid="{5a48d482-0dc9-4c22-ac9b-2be0332b564d}"]
+  .toolbarbutton-icon {
+  list-style-image: url(cookieEditor.svg) !important;
   transform: scale(1.1, 1.1);
 }
 
