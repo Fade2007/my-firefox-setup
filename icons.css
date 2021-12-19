@@ -331,4 +331,11 @@
   transform: scale(1.1, 1.1);
 }
 
+/* surfshark vpn connected */
+.webextension-browser-action[data-extensionid="{732216ec-0dab-43bb-ac85-4b5e1977599d}"]
+  .toolbarbutton-icon {
+  list-style-image: url(vpnOn.svg) !important;
+  transform: scale(1.1, 1.1);
+}
+
 /* *** addons icons end *** */
