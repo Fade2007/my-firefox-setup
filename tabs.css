@@ -39,17 +39,19 @@
 
 /* Makes the tab audio indicator show as overlay in all tabs, not just pinned ones */
 .tab-icon-image,
-.tab-throbber{ opacity: 1 !important; }
-
-.tab-icon-overlay:not([crashed]){
-    top: -5.5px;
-    inset-inline-end: -6px;
-    z-index: 1;
-    padding: 2px;
-    opacity: 1 !important;
-    stroke: var(--tab-icon-overlay-stroke, black) !important;
+.tab-throbber {
+  opacity: 1 !important;
 }
-.tab-icon-overlay:not([crashed]):hover{
+
+.tab-icon-overlay:not([crashed]) {
+  top: -5.5px;
+  inset-inline-end: -6px;
+  z-index: 1;
+  padding: 2px;
+  opacity: 1 !important;
+  stroke: var(--tab-icon-overlay-stroke, black) !important;
+}
+.tab-icon-overlay:not([crashed]):hover {
   background-color: var(--tab-icon-overlay-stroke, black) !important;
   border-radius: 10px !important;
 }
@@ -94,7 +96,7 @@
   position: absolute !important;
   transition: 0.2s !important;
   transform: translateY(10px) !important;
-/* Shape */
+  /* Shape */
   border-bottom: 2px solid var(--identity-icon-color);
   width: 16px;
 }
