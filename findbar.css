@@ -1,96 +1,101 @@
-/* findbar to top */
-:is(.browserContainer, #viewSource) .findbar-container :is(spacer, .findbar-find-fast[anonid="match-case-status"]) {
-  visibility: collapse;
+/* compact floating findbar */
+.browserContainer {
+  position: relative !important;
 }
 
-:is(.browserContainer, #viewSource) .findbar-closebutton {
-  padding: 0 !important;
-  margin: 0 !important;
-  margin-inline-end: 2px !important;
+.findbar-highlight.findbar-button.tabbable,
+.findbar-match-diacritics.findbar-button.tabbable,
+.findbar-highlight.findbar-button.tabbable,
+.findbar-entire-word.findbar-button.tabbable {
+  display: none !important;
 }
 
-:is(.browserContainer, #viewSource) .findbar-closebutton  .toolbarbutton-icon{
-  width: 16px !important;
-  height: 16px !important;
+#statuspanel-inner {
+  width: unset !important;
 }
-:is(.browserContainer, #viewSource) .findbar-textbox {
-  font-size: 14px !important;
+findbar {
+  -moz-box-ordinal-group: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  margin: -1px 20px 0 0 !important;
+  border: 1px solid var(--chrome-content-separator-color) !important;
+  border-top: 0 !important;
+  background-color: var(--toolbar-bgcolor) !important;
+  background-image: none !important;
+  z-index: 1002 !important;
+  display: flex !important;
 }
-
-:is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) {
-  -moz-box-ordinal-group: 0;  /* can't be replace by box-ordinal-group yet */
-  position: fixed !important;
-  display: inherit !important;
-  margin-top: -1px !important;
-  box-shadow: unset !important;
-  border: 1px solid #e1e1e2 !important;
-  border-top: 0px solid transparent !important;
-  border-radius: 0 0 3px 3px;
-  transition-property: margin-top, opacity, visibility !important;
-  background-image: unset !important;
-  z-index: 1000000 !important;
+#main-window[inFullscreen] findbar {
+  margin-top: 0 !important;
 }
 
-#main-window:-moz-lwtheme :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) {
-  appearance: none !important;
-  border: 1px solid var(--tabs-border-color) !important;
-  border-top: 0px solid transparent !important;
+findbar .findbar-container,
+findbar .close-icon {
+  pointer-events: auto;
+}
+.findbar-highlight,
+.findbar-case-sensitive {
+  padding: var(--toolbarbutton-inner-padding) !important;
+}
+.findbar-highlight .toolbarbutton-text,
+.findbar-case-sensitive > .toolbarbutton-text,
+.findbar-match-diacritics > .toolbarbutton-text {
+  display: none !important;
+}
+.findbar-highlight:after,
+.findbar-case-sensitive:after,
+.findbar-match-diacritics:after {
+  display: -moz-box !important;
+}
+.findbar-highlight:after {
+  content: "\00a0\00a0\00a0\00a0";
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAABlElEQVR42mL8//8/Ay0BQAAxMdAYAAQQzS0ACCCaWwAQQDS3ACCAWEjVsGzLvv/HLlxjsDLQYojycWIkpB4ggJhINZyfl5thcnU2Aw83J8OijbsJJkGAAGIi1XAvOzOG33/+MDia6TMwMzExzF69Da8lAAHERI7hP3/9Zvj24yeDlaE2mD9l6UaclgAEEBMphv/5+xdu+LfvQPzjB4OpjjrD4aNHceoHCCAWclwOMxxE7z1xnsHc3BynGQABxIivqNC3dPh/4dh+rIZ///GLYc/xcwxsbKwMRfHBOFMTQADhDaJLJw4yxBU1gA1DdzkxhoMAQADhDKL44kaw15ZMaALzm4oz4YbvO3mBKMNBACCAcFrw8d0bOBtmSV5SFDjMiTUcBAACiAEUB+h4w96j/0HYyt0f5As41rOw/9+7YM1/bHpwYYAAwumD4xeuM9i6+YLZKtqGDAt76xnJKYsAAogFl+GHd20Gs4/u2MBISWEHEECMtK7RAAKI5sU1QADR3AKAAKK5BQABRHMLAAKI5hYABBgAGVz2EZX7WKAAAAAASUVORK5CYII=)
+    center no-repeat !important;
+}
+.findbar-case-sensitive:after {
+  content: "Aa" !important;
+}
+.findbar-match-diacritics:after {
+  content: "eê" !important;
+}
+.found-matches {
+  -moz-box-ordinal-group: 0 !important;
+  margin: 0 8px 0 0 !important;
+}
+.findbar-find-status {
+  display: none !important;
+}
+.findbar-container,
+.findbar-closebutton {
+  vertical-align: middle !important;
 }
 
-#main-window:-moz-lwtheme :is(.browserContainer, #viewSource) :is(findbar, #FindToolbar) {
-  padding-block: 0 !important;
-  border: unset !important;
+.findbar-container checkbox.findbar-match-diacritics.tabbable,
+.findbar-container checkbox.findbar-case-sensitive.tabbable,
+checkbox.findbar-case-sensitive tabbable,
+checkbox.findbar-highlight.tabbable,
+checkbox.findbar-entire-word.tabbable {
+  display: none !important;
 }
 
-#main-window:-moz-lwtheme :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) .findbar-container {
-  appearance: none !important;
-  background-image: linear-gradient(to bottom, var(--toolbar-bgcolor),var(--toolbar-bgcolor)) !important;
-  margin-inline-end: -18px !important;
-  padding-inline-end: 18px !important;
+.findbar-container > hbox {
+  display: grid;
+  grid-template-columns: 1fr 24px 24px;
+}
+.findbar-container > hbox > input {
+  grid-area: 1/1/1/4;
+}
+.findbar-container > hbox > .findbar-find-previous {
+  grid-area: 1/2/1/3;
+  margin: 2px !important;
 }
 
-#main-window:-moz-lwtheme :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) .findbar-container {
-  appearance: none !important;
-  background-image: linear-gradient(to bottom, var(--toolbar-bgcolor),var(--toolbar-bgcolor)) !important;
-  margin-inline-end: -26px !important;
-  padding-inline-end: 26px !important;
-  margin-inline-start: -26px !important;
-  padding-inline-start: 26px !important;
+.findbar-container > hbox > .findbar-find-next {
+  grid-area: 1/3/1/4;
+  margin: 2px !important;
 }
 
-#main-window:-moz-lwtheme :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) .findbar-container hbox[anonid="findbar-textbox-wrapper"] {
-  padding-inline-start: 8px;
-}
-
-:is(.browserContainer, #viewSource) :is(.findbar-find-status,.found-matches) {
-  margin-inline-start: 4px !important;
-  margin-inline-end: 4px !important;
-  font-weight: bold !important;
-}
-:is(.browserContainer, #viewSource) .findbar-find-status {
-  font-style: italic !important;
-}
-#main-window:not(:-moz-lwtheme-brighttext) :is(.browserContainer, #viewSource) .findbar-find-status {
-  color: red !important;
-}
-#main-window:not(:-moz-lwtheme-brighttext) :is(.browserContainer, #viewSource) .found-matches {
-  color: green !important;
-}
-#main-window:-moz-lwtheme-brighttext :is(.browserContainer, #viewSource) :is(.findbar-find-status,.found-matches) {
-  color: white !important;
-}
-
-.browserContainer > findbar > #findbar-close-container {
-  background-color: unset !important;
-}
-
-/* checkbox to left */
-hbox[anonid="findbar-textbox-wrapper"] {
-  -moz-box-flex: 1 !important;
-  -moz-box-ordinal-group: 0;
-  box-align: end !important;
-}
-
-.findbar-container > :is(image, description, label) {
-  -moz-box-ordinal-group: 0;
+findbar {
+  margin-top: 20px !important;
 }
