@@ -297,7 +297,7 @@
 } /*
 
 /* smart referer on */
-.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUUlEQVQ4jZXSv0vVURzG8ZekXsEgh6D94paoLcHtLxBbbEvs/ge6uImzIGI4aEhDDvoPBNZ+oamco0m4hNXFn1soiNfBRzmD3nL48D3f57yfh/M5nwOPMYYtNNH+RzXDjsVrArs4RAvnHcznYQ7jmYBtHGEdr1HFgzuqGmY9nm04SOokFrGHfWwWxs1oe2Em4zlQHK0aYBrPUCsCatGmw1SLVrVxEbBdfG+rkrm4DjjLUZ7fI2AknjP4mp9Z/MZMhxZm8AtTucRvMJ++PmDlPy5xGe8zygV4hZ/4nuT+DmPsxxv8KCbnKT7iOHMdRA+6C2N3tMEw1+wQ9GXRyMZSQiuFsRJtKUwjnj7ZfIi6q3fewucAj/AEo9FaYerxVKA3NeDqme7gBJ8wh7f4Em0nzEDhu1n0JnUcq/iDvzjNBDbwMkzpufW2uzCMNbzDi7smcwnmOn9R1XjBYwAAAABJRU5ErkJggg=="]
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABpElEQVQ4T43TTSilURzH8Xu9zaSQspnVlGRjBkUWGLYzzYa8bKhJSSkbkZdkJS8biWyUmqZMSU2mxoKy8TKKZhYsZRaTpdkMJe98vzrqluvm1Of+u89znt85z3nOiUYikRyUognv8BqJ2l9ubuArfkX5qcE4snAVApOfSLjm+j+k4D+6DPiBcixgDTtwlHjN2ZWhGo3YMuAIJneiCM1IwzJaQspn6ntcYA67mECyAbchIJ+6jjH8xMswGzMc9QwV6EMV9mMDDEmFa+D7WeO1h3vWS0SdwTmO8RHbzwwopt8qMg3woVyMojvUzSdeoTK8Qg91Cn8MGEA7VsJMGqiJFnGe+xmow4wBtZjECUbwHS5YvObC2t9Bs9FpQAGG4cq6+n5O94ELK5v95D7w8/k17NvvRVPzMI1CzOILDuD+sE9S6POJ2oo9dNjHmy/gJ3RqQyHwN7UXh+H/K6qzLIGvN4hFXBrggtnS4W7rCqM5RXnY3EhvHBGeG3fpqQ/FBvjfMNfiA+rhAXP67pMlfIPnxS193wyId/JuuP4WbaGPR9f98qjdAd47YvzfngGrAAAAAElFTkSuQmCC"]
   .toolbarbutton-icon {
   list-style-image: url(gpp-good.svg) !important;
   transform: scale(1.2, 1.2);
@@ -310,8 +310,45 @@
   transform: scale(1.2, 1.2);
 }
 
-/* smart referer icon at start up */
+/* smart referer off */
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="icon-disabled.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-bad.svg) !important;
+  transform: scale(1.2, 1.2);
+}
+
+/* various smart referer icon change to tame it */
 .webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="icon-enabled.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-good.svg) !important;
+  transform: scale(1.2, 1.2);
+}
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="icon.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-good.svg) !important;
+  transform: scale(1.2, 1.2);
+}
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="scribblemaniac-ShieldLinkLogo1.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-good.svg) !important;
+  transform: scale(1.2, 1.2);
+}
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="scribblemaniac-ShieldLinkLogo2.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-good.svg) !important;
+  transform: scale(1.2, 1.2);
+}
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="icon-enabled-lite.svg"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-good.svg) !important;
+  transform: scale(1.2, 1.2);
+}
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="icon-enabled.16x16.png"]
+  .toolbarbutton-icon {
+  list-style-image: url(gpp-good.svg) !important;
+  transform: scale(1.2, 1.2);
+}
+.webextension-browser-action[data-extensionid="smart-referer@meh.paranoid.pk"][style*="icon-enabled-lite.16x16.png"]
   .toolbarbutton-icon {
   list-style-image: url(gpp-good.svg) !important;
   transform: scale(1.2, 1.2);
