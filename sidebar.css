@@ -1,0 +1,16 @@
+/* Sidebar search box enchancements */
+image.textbox-search-sign {
+  display: none !important;
+}
+search-textbox,
+search-box {
+  appearance: none !important;
+  padding: 3px !important;
+  border: 1px solid #8F8F9D !important;
+  border-radius: 6px !important;
+  font-family: Segoe UI !important;
+}
+search-textbox.tabsFilter:focus-within,
+#search-box:focus-within {
+  border: 2px solid #218FA6 !important;
+}
